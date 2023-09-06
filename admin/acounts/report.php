@@ -90,7 +90,7 @@
                                         <tr>
                                             <td> <?php echo $i; ?> </td>
                                             <td> <?php echo  $record['account_number']; ?> </td>
-                                            <td>  <?php echo  number_format($record['all_price'],2)?> </td>
+                                            <td> <?php echo  number_format($record['all_price'], 2) ?> </td>
 
                                             <td> <?php
                                                     $stmt = $connect->prepare("SELECT * FROM account_details WHERE account_id=?");
@@ -130,14 +130,7 @@
                                                                 <label for="name"> مبلغ الايداع الكلي المطلوب </label>
                                                                 <input required type="number" class="form-control" name="all_price" value="<?php echo $record['all_price'] ?>">
                                                             </div>
-                                                            <div class="form-group">
-                                                                <label for="Company-2" class="block"> الحالة </label>
-                                                                <select name="status" class="form-control select2" id="">
-                                                                    <option value=""> تغير الحالة </option>
-                                                                    <option <?php if ($record['status'] == 0) echo 'selected'; ?> value="0"> نشط </option>
-                                                                    <option <?php if ($record['status'] == 1) echo 'selected'; ?> value="1"> تم السداد </option>
-                                                                </select>
-                                                            </div>
+
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="submit" name="edit_cat" class="btn btn-primary waves-effect waves-light "> تعديل </button>
