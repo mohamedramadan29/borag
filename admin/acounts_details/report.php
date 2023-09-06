@@ -94,8 +94,8 @@ if (isset($_GET['account_id'])) {
                                 </thead>
                                 <tbody>
                                     <?php
-                                    $stmt = $connect->prepare("SELECT * FROM account_details ORDER BY id DESC");
-                                    $stmt->execute();
+                                    $stmt = $connect->prepare("SELECT * FROM account_details WHERE account_id = ? ORDER BY id DESC");
+                                    $stmt->execute(array($account_id));
                                     $allrecord = $stmt->fetchAll();
                                     $i = 0;
                                     $total_paid_amount = 0;
