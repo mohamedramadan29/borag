@@ -10,6 +10,7 @@ if (isset($_GET['account_id'])) {
     if ($count > 0) {
         $account_number = $account_data['account_number'];
         $all_price = $account_data['all_price'];
+        $current_balance = $account_data['current_balance'];
     } else {
         header("Location:index");
     }
@@ -165,6 +166,12 @@ if (isset($_GET['account_id'])) {
                                             <?php
                                             $remind_amount = $all_price - $total_paid_amount;
                                             echo number_format($remind_amount, 2); ?> </th>
+                                    </tr>
+                                    <tr>
+                                        <th colspan='2' style="background-color: #2980b9; color:#fff"> الرصيد الحالي </th>
+                                        <th colspan="3" style="background-color: #f1c40f; color:#fff">
+                                            <?php echo $current_balance ?>
+                                        </th>
                                     </tr>
                                 </tfoot>
                             </table>

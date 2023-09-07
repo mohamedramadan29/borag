@@ -75,6 +75,7 @@
                                         <th> المبلغ الكلي </th>
                                         <th> مبلغ الايداع </th>
                                         <th> الباقي </th>
+                                        <th> الرصيد الحالي </th>
                                         <th> </th>
                                     </tr>
                                 </thead>
@@ -105,8 +106,11 @@
                                             </td>
                                             <td> <?php
                                                     $remind = $record['all_price'] - $total_price;
-                                                    echo number_format($remind, 2); ?> </td>
+                                                    echo number_format($remind, 2); ?>
+                                            </td>
+                                            <td> <span class="badge badge-danger"> <?php echo $record['current_balance'] ?> </span> </td>
                                             <td>
+
                                                 <button type="button" class="btn btn-success btn-sm waves-effect" data-toggle="modal" data-target="#edit-Modal_<?php echo $record['id']; ?>"> تعديل <i class='fa fa-pen'></i> </button>
                                                 <a href="main.php?dir=acounts&page=delete&request_id=<?php echo $record['id']; ?>" class="confirm btn btn-danger btn-sm"> حذف <i class='fa fa-trash'></i> </a>
                                                 <a href="main.php?dir=acounts_details&page=report&account_id=<?php echo $record['id']; ?>" class="btn btn-warning btn-sm"> تفاصيل الحساب <i class='fa fa-eye'></i> </a>
@@ -130,7 +134,10 @@
                                                                 <label for="name"> مبلغ الايداع الكلي المطلوب </label>
                                                                 <input required type="number" class="form-control" name="all_price" value="<?php echo $record['all_price'] ?>">
                                                             </div>
-
+                                                            <div class="form-group">
+                                                                <label for="name"> الرصيد الحالي <span class="badge badge-danger"> (ادخال يدوي ) </span> </label>
+                                                                <input required type="number" class="form-control" name="current_balance" value="<?php echo $record['current_balance'] ?>">
+                                                            </div>
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="submit" name="edit_cat" class="btn btn-primary waves-effect waves-light "> تعديل </button>

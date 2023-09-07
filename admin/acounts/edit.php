@@ -3,7 +3,7 @@ if (isset($_POST['edit_cat'])) {
     $request_id = $_POST['request_id'];
     $account_number = sanitizeInput($_POST['account_number']);
     $all_price = sanitizeInput($_POST['all_price']);
-    
+    $current_balance = sanitizeInput($_POST['current_balance']);
     $formerror = [];
     if (empty($account_number)) {
         $formerror[] = ' من فضلك ادخل رقم الحساب  ';
@@ -17,8 +17,8 @@ if (isset($_POST['edit_cat'])) {
     }
     $formerror = [];
     if (empty($formerror)) {
-        $stmt = $connect->prepare("UPDATE accounts SET account_number=?,all_price=? WHERE id = ? ");
-        $stmt->execute(array($account_number, $all_price, $request_id));
+        $stmt = $connect->prepare("UPDATE accounts SET account_number=?,all_price=?,current_balance=? WHERE id = ? ");
+        $stmt->execute(array($account_number, $all_price,$current_balance, $request_id));
         if ($stmt) {
             $_SESSION['success_message'] = "تم التعديل بنجاح ";
             header('Location:main?dir=acounts&page=report');
