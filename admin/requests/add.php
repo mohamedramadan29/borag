@@ -5,14 +5,17 @@ if (isset($_POST['add_cat'])) {
     $city = sanitizeInput($_POST['city']);
     $phone = sanitizeInput($_POST['phone']);
     $request_order = sanitizeInput($_POST['request_order']);
+    $request_number = sanitizeInput($_POST['request_number']);
+    $note = sanitizeInput($_POST['note']);
+
 
     $formerror = [];
     if (empty($name)) {
         $formerror[] = ' من فضلك ادخل الاسم  ';
     }
     if (empty($formerror)) {
-        $stmt = $connect->prepare("INSERT INTO requests (name,price_request,city,phone,request_order)
-        VALUES(:zname,:zprice_request,:zcity,:zphone,:zrequest_order)
+        $stmt = $connect->prepare("INSERT INTO requests (name,price_request,city,phone,request_order,request_number,note)
+        VALUES(:zname,:zprice_request,:zcity,:zphone,:zrequest_order,:zrequest_number,:znote)
         ");
         $stmt->execute(array(
             "zname" => $name,
@@ -20,6 +23,8 @@ if (isset($_POST['add_cat'])) {
             "zcity" => $city,
             "zphone" => $phone,
             "zrequest_order" => $request_order,
+            "zrequest_number" => $request_number,
+            "znote" => $note,
         ));
         if ($stmt) {
             $_SESSION['success_message'] = " تمت الأضافة بنجاح  ";

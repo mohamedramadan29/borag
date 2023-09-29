@@ -1,5 +1,8 @@
 <div class="whatsapp_bottom">
-    <a href="https://wa.me/+96407710997820"> تواصل معنا <i class="fa fa-whatsapp"></i> </a>
+    <a href="https://wa.me/+96407849222335"> تواصل معنا <i class="fa fa-whatsapp"></i> </a>
+</div>
+<div class="whatsapp_bottom whatsapp_bottom2">
+    <a href="https://wa.me/+96407755112993"> تواصل معنا <i class="fa fa-whatsapp"></i> </a>
 </div>
 <div class="footer">
     <div class="container">
@@ -9,9 +12,8 @@
                 <div class="col-lg-12">
                     <div class="info">
                         <ul class="list-unstyled">
-                            <li> <i class="fa fa-whatsapp"></i> <a href="https://wa.me/+96407710997820"> 07710997820 </a></li>
-                            <li> <i class="fa fa-whatsapp"></i> <a href="https://wa.me/+96407832301812"> 07832301812 </a> </li>
-                            <li> <i class="fa fa-envelope"></i> Alburaqq2016@gmail.com </li>
+                            <li> <i class="fa fa-whatsapp"></i> <a href="https://wa.me/+96407710997820"> 07710997820 </a></li> 
+                            <li> <i class="fa fa-envelope"></i> info@al-buraq1.com </li>
                             <li style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#exampleModal"> <i class="fa fa-support"></i> للاستفسار والشكاوي </li>
                         </ul>
                     </div>
@@ -31,12 +33,8 @@
                         <ul class="list-unstyled">
                             <li> <i class="fa fa-whatsapp"></i> <a href="https://wa.me/+96407710997820"> 07710997820 </a></li>
 
-                            <li> <i class="fa fa-envelope"></i> Alburaqq2016@gmail.com </li>
-                        </ul>
-                        <ul class="list-unstyled">
-                            <li> <i class="fa fa-whatsapp"></i> <a href="https://wa.me/+96407832301812"> 07832301812 </a> </li>
-                            <li style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#exampleModal"> <i class="fa fa-support"></i> للاستفسار والشكاوي </li>
-                        </ul>
+                            <li> <i class="fa fa-envelope"></i>  info@al-buraq1.com  </li>
+                        </ul> 
                     </div>
                 </div>
                 <div class="col-lg-12">
@@ -129,14 +127,12 @@
 <script src='<?php echo $js; ?>/jquery.min.js'></script>
 <script src='<?php echo $js; ?>/bootstrap.min.js'></script>
 <!-- nice vide -->
-<script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+<script src='<?php echo $js; ?>/plyr.min.js'></script>
 <script src="https://kit.fontawesome.com/588e070751.js" crossorigin="anonymous"></script>
-<!--<script src='<?php echo $js; ?>/slick.min.js'></script> -->
 <!-- Sweet Alert  -->
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <!--  type js -->
 <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-<script src='<?php echo $js; ?>/select2.min.js'></script>
 <script src='<?php echo $js; ?>/main.js'></script>
 </body>
 

@@ -185,7 +185,17 @@ body {
     width: 150px;
     text-align: center
 }
-
+.whatsapp_bottom2 {
+    position: fixed;
+    bottom: 45px;
+    left: 15px;
+    right: auto;
+    background-color: #25D366;
+    padding: 10px;
+    border-radius: 28px;
+    width: 150px;
+    text-align: center
+}
 .whatsapp_bottom a {
     text-decoration: none;
     color: #fff
