@@ -32,8 +32,8 @@
                     <div class="info">
                         <ul class="list-unstyled">
                             <li> <i class="fa fa-whatsapp"></i> <a href="https://wa.me/+96407710997820"> 07710997820 </a></li>
-
                             <li> <i class="fa fa-envelope"></i>  info@al-buraq1.com  </li>
+                            <li style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#exampleModal"> <i class="fa fa-support"></i> للاستفسار والشكاوي </li>
                         </ul> 
                     </div>
                 </div>

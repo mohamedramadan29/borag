@@ -41,6 +41,8 @@ if (isset($_SESSION['admin_username'])) {
         include "requests/finish_report.php";
     } elseif ($dir == 'requests' && $page == 'print') {
         include "requests/print.php";
+    } elseif ($dir == 'requests' && $page == 'document') {
+        include "requests/document.php";
     }
     // START Profile
     if ($dir == 'profile' && $page == 'add') {
@@ -81,6 +83,12 @@ if (isset($_SESSION['admin_username'])) {
         include 'acounts_details/delete.php';
     } elseif ($dir == 'acounts_details' && $page == 'report') {
         include "acounts_details/report.php";
+    }
+    // START Acounts Details
+    if ($dir == 'company_info' && $page == 'edit') {
+        include "company_info/edit.php";
+    } elseif ($dir == 'company_info' && $page == 'report') {
+        include "company_info/report.php";
     }
     ?>
 

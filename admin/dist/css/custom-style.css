@@ -303,3 +303,54 @@ label:not(.form-check-label):not(.custom-file-label) {
 .attribute-group .custom-select[multiple]{
     height: 100px !important;
 }
+.print_document{
+
+}
+.print_document .first_section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.print_document .first_section .first1{
+    border-bottom: 1px solid #000;
+    width: 40%;
+}
+.print_document .first_section .first1 button{
+    color: #000;
+    width: 220px;
+    margin-bottom: 20px;
+    border: 2px solid #000;
+    border-radius: 0;
+}
+.print_document .first_section .first3{
+width: 40%;
+border-bottom: 1px solid #000;
+margin-top: -18px;
+}
+.print_document .first_section .first3 p{
+    
+}
+.print_document .first_section .first3 span{
+    border-bottom: 1px solid #000;
+    text-align: center;
+    width: 170px;
+    display: inline-block;
+}
+.print_document .data img {
+    text-align: center;
+    max-width: 170px !important;
+    margin: auto;
+    display: block;
+    position: relative;
+    top: 27px;
+}
+.print_document .second_section {}
+.print_document .second_section .first1 {}
+.print_document .second_section .first1 button {
+    color: #000;
+    width: 180px;
+    margin-bottom: 20px;
+    border: 2px solid #000;
+    border-radius: 0;
+}
+.print_document .second_section {}

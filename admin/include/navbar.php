@@ -59,6 +59,13 @@
               </a>
             </li>
             <li class="nav-item">
+              <a href="main.php?dir=company_info&page=report" class="nav-link">
+                <p>
+                  معلومات الشركه 
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
               <a href="main.php?dir=acounts&page=report" class="nav-link">
                 <p>
                   الحسابات

@@ -3,13 +3,13 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0 text-dark"> حسابي  </h1>
+                <h1 class="m-0 text-dark"> حسابي </h1>
             </div>
             <!-- /.col -->
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-left">
                     <li class="breadcrumb-item"><a href="main.php?dir=dashboard&page=dashboard">الرئيسية</a></li>
-                    <li class="breadcrumb-item active"> حسابي  </li>
+                    <li class="breadcrumb-item active"> حسابي </li>
                 </ol>
             </div>
             <!-- /.col -->
@@ -27,10 +27,6 @@
         <div class="row">
             <div class="col-12">
                 <div class="card">
-
-                    <div class="card-header">
-                        <button type="button" class="btn btn-primary waves-effect btn-sm" data-toggle="modal" data-target="#add-Modal"> أضافة سند صرف <i class="fa fa-plus"></i> </button>
-                    </div>
                     <?php
                     if (isset($_SESSION['success_message'])) {
                         $message = $_SESSION['success_message'];
@@ -94,9 +90,9 @@
                                             <td> <?php echo  $record['email']; ?> </td>
                                             <td> <?php echo  $record['password']; ?> </td>
                                             <td> <?php echo  $record['phone']; ?> </td>
-                                        
+
                                             <td>
-                                                <button type="button" class="btn btn-success btn-sm waves-effect" data-toggle="modal" data-target="#edit-Modal_<?php echo $record['id']; ?>"> تعديل   <i class='fa fa-pen'></i> </button>
+                                                <button type="button" class="btn btn-success btn-sm waves-effect" data-toggle="modal" data-target="#edit-Modal_<?php echo $record['id']; ?>"> تعديل <i class='fa fa-pen'></i> </button>
                                             </td>
                                         </tr>
                                         <!-- EDIT NEW CATEGORY MODAL   -->
@@ -111,19 +107,19 @@
                                                             <div class="form-group">
                                                                 <input type='hidden' name="request_id" value="<?php echo $record['id']; ?>">
                                                                 <label for="Company-2" class="block"> اسم المستخدم </label>
-                                                                <input type="text" name="username" class="form-control" value="<?php echo $record['username']?>">
+                                                                <input type="text" name="username" class="form-control" value="<?php echo $record['username'] ?>">
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="Company-2" class="block"> البريد الألكتروني </label>
-                                                                <input type="text" name="email" class="form-control" value="<?php echo $record['email']?>">
+                                                                <input type="text" name="email" class="form-control" value="<?php echo $record['email'] ?>">
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="Company-2" class="block"> رقم الهاتف </label>
-                                                                <input type="text" name="phone" class="form-control" value="<?php echo $record['phone']?>">
+                                                                <input type="text" name="phone" class="form-control" value="<?php echo $record['phone'] ?>">
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="Company-2" class="block"> كلمة المرور </label>
-                                                                <input type="text" name="password" class="form-control" value="<?php echo $record['password']?>">
+                                                                <input type="text" name="password" class="form-control" value="<?php echo $record['password'] ?>">
                                                             </div>
 
                                                         </div>
