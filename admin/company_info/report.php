@@ -71,6 +71,7 @@
                                         <th> الأسم </th>
                                         <th> رقم الهاتف </th>
                                         <th> العنوان </th>
+                                        <th> عمولة الشركه  </th>
                                         <th> </th>
                                     </tr>
                                 </thead>
@@ -88,6 +89,7 @@
                                             <td> <?php echo  $record['name']; ?> </td>
                                             <td> <?php echo  $record['phone']; ?> </td>
                                             <td> <?php echo  $record['address']; ?> </td>
+                                            <td> <?php echo  $record['percent']; ?> </td>
 
                                             <td>
                                                 <button type="button" class="btn btn-success btn-sm waves-effect" data-toggle="modal" data-target="#edit-Modal_<?php echo $record['id']; ?>"> تعديل <i class='fa fa-pen'></i> </button>
@@ -114,6 +116,10 @@
                                                             <div class="form-group">
                                                                 <label for="Company-2" class="block"> العنوان </label>
                                                                 <input type="text" name="address" class="form-control" value="<?php echo $record['address'] ?>">
+                                                            </div> 
+                                                            <div class="form-group">
+                                                                <label for="Company-2" class="block"> نسبة العمولة </label>
+                                                                <input type="text" name="percent" class="form-control" value="<?php echo $record['percent'] ?>">
                                                             </div> 
                                                         </div>
                                                         <div class="modal-footer">
