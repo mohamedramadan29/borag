@@ -80,8 +80,8 @@
                                         <th> حالة الطلب </th>
                                         <th> رقم الطلب </th>
                                         <th> عمليات </th>
-                                        <th> ملاحظات   </th>
-                                       
+                                        <th> ملاحظات </th>
+
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -118,11 +118,11 @@
                                             <td> <?php echo  $record['request_number']; ?> </td>
 
                                             <td>
-                                                <button type="button" class="btn btn-success btn-sm waves-effect" data-toggle="modal" data-target="#edit-Modal_<?php echo $record['id']; ?>">   <i class='fa fa-pen'></i> </button>
-                                                <a href="main.php?dir=requests&page=print&request_id=<?php echo $record['id']; ?>" class="btn btn-primary btn-sm">   <i class='fa fa-print'></i> </a>
-                                                <a href="main.php?dir=requests&page=delete&request_id=<?php echo $record['id']; ?>" class="confirm btn btn-danger btn-sm">   <i class='fa fa-trash'></i> </a>
-                                                <a href="main.php?dir=requests&page=document&request_id=<?php echo $record['id']; ?>" class="btn btn-primary btn-sm">   <i class='fa fa-file'></i> </a>
-                                            </td> 
+                                                <button type="button" class="btn btn-success btn-sm waves-effect" data-toggle="modal" data-target="#edit-Modal_<?php echo $record['id']; ?>"> <i class='fa fa-pen'></i> </button>
+                                                <a href="main.php?dir=requests&page=print&request_id=<?php echo $record['id']; ?>" class="btn btn-primary btn-sm"> <i class='fa fa-print'></i> </a>
+                                                <a href="main.php?dir=requests&page=delete&request_id=<?php echo $record['id']; ?>" class="confirm btn btn-danger btn-sm"> <i class='fa fa-trash'></i> </a>
+                                                <a href="main.php?dir=requests&page=document&request_id=<?php echo $record['id']; ?>" class="btn btn-primary btn-sm"> <i class='fa fa-file'></i> </a>
+                                            </td>
                                             <td> <?php echo  $record['note']; ?> </td>
                                         </tr>
                                         <!-- EDIT NEW CATEGORY MODAL   -->
@@ -196,10 +196,6 @@
                                     <div class="form-group">
                                         <label for="name"> تاريخ استلام الطلب </label>
                                         <input required type="date" class="form-control" name="request_order">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="name"> رقم الطلب </label>
-                                        <input required type="text" class="form-control" name="request_number">
                                     </div>
                                     <div class="form-group">
                                         <label for="name"> ملاحظات </label>

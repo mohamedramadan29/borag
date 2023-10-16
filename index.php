@@ -15,7 +15,7 @@ include "init.php";
                 <p> لا تضيع الوقت واستثمر مع شركة البراق للخدمات الماليه
                     وللاستثمار كن احد زبائننا
                     المميزين <br> وانضم إلى مجموعة متميزة من المتداولين والمستثمرين. </p>
-               
+
                 <a href="#compelete_form" class="btn btn-primary animate__animated animate__fadeInUp"> احجز الأن </a>
             </div>
         </div>
@@ -78,6 +78,7 @@ include "init.php";
     </div>
 </div>
 <?php
+
 if (isset($_REQUEST['send_request'])) {
     $name = sanitizeInput($_POST['name']);
     $price_request = sanitizeInput($_POST['price_request']);
@@ -89,8 +90,13 @@ if (isset($_REQUEST['send_request'])) {
         $formerror[] = 'من فضلك اكمل جميع البيانات';
     }
     if (empty($formerror)) {
-        $stmt = $connect->prepare("INSERT INTO requests (name,price_request,city,phone,request_order)
-        VALUES(:zname,:zprice_request,:zcity,:zphone,:zrequest_order)
+        // get the last request number 
+        $stmt = $connect->prepare("SELECT * FROM requests ORDER BY id DESC");
+        $stmt->execute();
+        $last_request_data = $stmt->fetch();
+        $last_request_number = $last_request_data['request_number'];
+        $stmt = $connect->prepare("INSERT INTO requests (name,price_request,city,phone,request_order,request_number)
+        VALUES(:zname,:zprice_request,:zcity,:zphone,:zrequest_order,:zrequest_number)
         ");
         $stmt->execute(array(
             "zname" => $name,
@@ -98,6 +104,7 @@ if (isset($_REQUEST['send_request'])) {
             "zcity" => $city,
             "zphone" => $phone,
             "zrequest_order" => $request_order,
+            "zrequest_number" => "00" . $last_request_number + 1,
         ));
         if ($stmt) {
 ?>
